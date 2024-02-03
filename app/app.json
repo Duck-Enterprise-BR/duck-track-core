@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Duck Track",
+    "slug": "duck-track-app",
+    "version": "0.0.1-beta",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "scheme": "ducktrack",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#377aff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": ""
+      },
+      "router": {
+        "origin": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 1,
+      "package": "com.srpatos.ducktrack"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": ""
+    },
+    "owner": "srpatos"
+  }
+}

@@ -1,0 +1,7 @@
+﻿node_modules
+dist
+.env
+logs.json
+firebase.json
+*.js
+backup/database/*

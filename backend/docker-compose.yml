@@ -1,0 +1,55 @@
+﻿version: '3'
+
+services:
+  redis_cache:
+    container_name: ducktrack-redis-cache
+    image: redis:alpine
+    restart: always
+    ports:
+      - "${REDIS_CACHE_PORT}:6379"
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    command: redis-server --requirepass ${REDIS_PASSWORD}
+    networks:
+      - app
+
+  redis_queue:
+    container_name: ducktrack-redis-queue
+    image: redis:alpine
+    restart: always
+    ports:
+      - "${REDIS_QUEUE_PORT}:6379"
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    command: redis-server --requirepass ${REDIS_PASSWORD}
+    networks:
+      - app
+
+  server_instance_0:
+    container_name: instance_0
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - app
+
+  nginx:
+    build:
+      dockerfile: nginx/nginx.dockerfile
+      context: .
+    image: nginx
+    restart: always
+    container_name: nginx
+    ports:
+      - "80:80"
+    networks:
+      - app
+    depends_on:
+      - "server_instance_0"
+
+networks:
+  app:
+    driver: bridge
