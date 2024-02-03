@@ -23,7 +23,9 @@ Dê uma olhada nas tecnologias:
 </p>
 
 ## App
-
-<img width=210 src="images/3.webp">
-<img width=210 src="images/2.webp">
-<img width=210 src="images/1.webp">
+<div>
+<div style="display: flex;">
+  <img width="210" src="images/3.webp" alt="3" />
+  <img width="210" src="images/2.webp" alt="2" />
+  <img width="210" src="images/1.webp" alt="1" />
+</div>
