@@ -24,7 +24,7 @@ Dê uma olhada nas tecnologias:
 
 ## App
 <div>
-<div style="display: flex;align-items: center;">
+<div style="display: flex; justify-content: center; align-items: center;">
   <img width="210" src="images/3.webp" alt="3" />
   <img width="210" src="images/2.webp" alt="2" />
   <img width="210" src="images/1.webp" alt="1" />
