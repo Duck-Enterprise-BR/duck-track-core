@@ -6,8 +6,6 @@ Este projeto foi cuidadosamente desenvolvido com foco em boas práticas de progr
 
 A base tecnológica é sólida, com Node.js e TypeScript impulsionando o back-end, Express para a construção de APIs robustas, e tudo isso gerenciado em containers Docker, equilibrados com Nginx.
 
-A segurança é uma prioridade, sendo implementada autenticação com tokens para garantir a proteção dos dados sensíveis. Além disso, o aplicativo oferece notificações em tempo real por meio de push notifications usando o Firebase.
-
 O banco de dados é alimentado pelo MongoDB, uma escolha que combina perfeitamente com a flexibilidade e escalabilidade necessárias para um sistema de rastreamento de encomendas.
 
 Por fim, o App é construído sobre o ecossistema Expo, aproveitando o poder do TypeScript para criar uma experiência de usuário fluida e consistente.
